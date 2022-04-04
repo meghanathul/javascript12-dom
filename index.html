@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <pre>
+        const element=document.getElementsByTagName('h1')
+console.log(element)
+console.log(element[0].innerText)
+    </pre>
+onclick event
+        <!-- <h4></h4> -->
+        <h1 id="data">Welcome</h1>
+        <button onclick="clickme()">click</button>
+        <pre>
+            
+ function clickme(){
+        const text=document.getElementsByTagName('h1');
+         text[0].innerText='Good by !!!!!';
+    
+         text[0].style.color='darkred';
+         text[0].style.backgroundColor='grey';
+         text[0].style.margin='0px';
+         text[0].style.padding='50px';
+     }
+        </pre>
+
+        <hr>
+        
+    
+        <div id="task">
+            <span>hii</span>
+            <p>fxgcb</p>
+            
+        </div>
+   <h1> innertext</h1>
+ <h3> it will return all text contain by an element and all its ciled element.</h3>
+ 
+    <button onclick="innertext()">innerText</button>
+   
+    <pre>
+        function innertext(){
+            const element=document.getElementById('task')
+            alert(element.innerText)
+        }
+    </pre>
+    
+   <h1>innerhtml</h1>
+  <h3>  it return all text including htmltags and it contain by an element</h3>
+  <button onclick="innerhtml()">innereHtml</button>
+  <pre>
+    function innerhtml(){
+        const e=document.getElementById('task')
+        alert(e.innerHTML)
+    }
+  </pre>
+    
+   <hr>
+<h1>Create Element</h1>
+    <button onclick="create()">createtext</button>
+    <h1 id="parent"></h1>
+    <pre>
+
+        function create(){
+            //for create
+            const ele=document.createElement('span')
+            ele.setAttribute('class','heading')
+            ele.innerText='i am span'
+            //for screen
+            const parent= document.getElementById('parent')
+            parent.appendChild(ele)
+            console.log(ele)
+        }
+    </pre>
+    <script src="./script.js"></script>
+</body>
+</html>
